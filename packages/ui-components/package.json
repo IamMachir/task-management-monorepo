@@ -1,0 +1,29 @@
+{
+  "name": "@task-mono/ui-components",
+  "version": "0.1.0",
+  "description": "Reusable UI component library for the Task Management Monorepo",
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "build": "tsc --declaration --outDir dist",
+    "dev": "tsc --watch",
+    "lint": "echo 'lint ui-components'"
+  },
+  "peerDependencies": {
+    "react": ">=18.0.0",
+    "react-dom": ">=18.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "typescript": "^5.6.3"
+  },
+  "dependencies": {
+    "clsx": "^2.1.1",
+    "tailwind-merge": "^2.5.4",
+    "@task-mono/utils": "workspace:*"
+  }
+}
