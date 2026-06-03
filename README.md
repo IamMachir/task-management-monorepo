@@ -1,147 +1,270 @@
-# Task Management Dashboard — Monorepo
+# Task Management Monorepo
 
-> **Course:** SEng5306 — Component Based Software Development
-> **Instructor:** [@daniel-mitiku](https://github.com/daniel-mitiku)
-> **Student:** Machir Tadesse Woldemariam · UGE/27638/14
-> **University:** Adama Science and Technology University
+**Advanced Task Management System** built with a shared component architecture.
+
+## Assignment Information
+
+**Course:** SEng5306 — Component Based Software Development  
+**Institution:** Adama Science and Technology University  
+**Instructor:** Daniel Metiku Bekere  
+**Assignment Type:** Group Laboratory Project (10% Weighting)  
+**Submission:** May 2026
 
 ---
 
-## Overview
+## Group Members
 
-A full-stack **Task Management Dashboard** built as a modular monorepo. Two independent Next.js applications share a common UI component library and utility package, demonstrating component-based software development principles.
+| Name | Student ID | Role |
+|------|-----------|------|
+| Machir Tadesse Woldemariam | UGE/27638/14 | Repository Lead |
+| Abenezer Tewodros | UGE/27816/14 | Contributor |
+| Efa Mirkana | UGE/27834/14 | Contributor |
+| Musbah Rida | UGE/27831/14 | Contributor |
+| Samuel Girma | UGE/27830/14 | Contributor |
+
+---
+
+## Features
+
+### ✨ New Features (Sprint 1)
+
+#### 1. **Dark Mode Toggle** 🌙
+- Reusable `DarkModeToggle` component used across all apps
+- Persists user preference to localStorage
+- Respects system color scheme preference
+- Smooth transition between light/dark themes
+- Used in: **TeamFlow** & **PersonalFocus**
+
+#### 2. **Bulk Task Operations** ✅
+- Reusable `BulkTaskActions` component for multi-select workflows
+- Select/deselect individual tasks
+- Select all / clear all actions
+- Bulk operations:
+  - ✓ Mark multiple tasks as complete
+  - 🗑️ Delete multiple tasks at once
+  - 🎯 Change priority for multiple tasks
+- Confirmation dialogs to prevent accidents
+- Visual feedback for selected items
+- Used in: **TeamFlow** & **PersonalFocus**
 
 ---
 
 ## Architecture
 
+### Monorepo Structure
+
 ```
 task-management-monorepo/
 ├── apps/
-│   ├── feature-x/          # TeamFlow — Kanban team task dashboard (port 3000)
-│   └── feature-y/          # PersonalFocus — Personal daily planner (port 3001)
+│   ├── feature-x/              TeamFlow (Kanban board with bulk ops)
+│   │   ├── src/app/page.tsx    ← Uses DarkModeToggle & BulkTaskActions
+│   │   └── package.json
+│   └── feature-y/              PersonalFocus (Daily planner with bulk ops)
+│       ├── src/app/page.tsx    ← Uses DarkModeToggle & BulkTaskActions
+│       └── package.json
 ├── packages/
-│   ├── ui-components/      # Reusable React UI components (Tailwind + TypeScript)
-│   └── utils/              # Shared utility functions (dates, filtering, storage…)
-├── turbo.json              # Turborepo pipeline config
-├── pnpm-workspace.yaml     # pnpm workspace definition
-├── tsconfig.json           # Root TypeScript config
-└── package.json            # Root package config
+│   ├── ui-components/
+│   │   ├── DarkModeToggle.tsx  ← New: Dark mode toggle button
+│   │   ├── BulkTaskActions.tsx ← New: Multi-select task operations
+│   │   ├── Button.tsx
+│   │   ├── TaskCard.tsx
+│   │   └── ...others
+│   └── utils/
+│       ├── theme.ts            ← New: Color constants & utilities
+│       ├── bulkOperations.ts   ← New: Bulk edit helpers
+│       ├── useDarkMode.ts      ← New: Dark mode React hook
+│       ├── date.ts
+│       ├── string.ts
+│       └── ...others
+├── turbo.json                  Turborepo config
+├── pnpm-workspace.yaml         Monorepo workspace
+└── README.md
 ```
 
-### Package Responsibilities
+---
 
-| Package | Role |
-|---------|------|
-| `@task-mono/ui-components` | Reusable React components — TaskCard, KanbanColumn, Sidebar, StatsCard, PriorityBadge, etc. |
-| `@task-mono/utils` | Shared utility functions — date formatting, filtering, localStorage, ID generation, validation |
-| `apps/feature-x` | **TeamFlow** — assembly only; imports all UI + utils from packages |
-| `apps/feature-y` | **PersonalFocus** — assembly only; imports all UI + utils from packages |
+## Technology Stack
+
+- **Framework:** Next.js 15.0.3
+- **Language:** TypeScript 5.6.3
+- **Styling:** Tailwind CSS 3.4.14
+- **Build Tool:** Turborepo 2.3.3
+- **Package Manager:** pnpm 9.14.4
+- **Icons:** Lucide React
+- **Utilities:** clsx, tailwind-merge
 
 ---
 
-## Tech Stack
-
-| Tool | Purpose |
-|------|---------|
-| [Turborepo](https://turbo.build) | Monorepo build orchestration |
-| [pnpm Workspaces](https://pnpm.io/workspaces) | Package management |
-| [Next.js 15](https://nextjs.org) | React framework (App Router) |
-| [TypeScript](https://typescriptlang.org) | Type safety |
-| [Tailwind CSS](https://tailwindcss.com) | Styling |
-| [Shadcn/ui](https://ui.shadcn.com) | UI component foundation |
-
----
-
-## Quick Start
+## Getting Started
 
 ### Prerequisites
-- Node.js 18+
-- pnpm 9+
 
-```bash
-npm install -g pnpm
-```
+- Node.js (v18+)
+- pnpm (v9+)
 
 ### Installation
 
 ```bash
-# Clone the repository
+# Clone repository
 git clone https://github.com/IamMachir/task-management-monorepo.git
 cd task-management-monorepo
 
-# Install all dependencies
+# Install pnpm globally (if needed)
+npm install -g pnpm
+
+# Install dependencies
 pnpm install
 ```
 
-### Development
+### Running the Apps
 
 ```bash
-# Run both apps simultaneously
+# Start both apps in dev mode
 pnpm dev
 
-# Run individual apps
-pnpm --filter feature-x dev   # TeamFlow      → http://localhost:3000
-pnpm --filter feature-y dev   # PersonalFocus → http://localhost:3001
+# Available at:
+# - http://localhost:3000  (TeamFlow - Feature X)
+# - http://localhost:3001  (PersonalFocus - Feature Y)
 ```
 
-### Build
+### Running Tests
 
 ```bash
-# Build all packages and apps
+pnpm test
+```
+
+### Building for Production
+
+```bash
 pnpm build
-
-# Build a specific app
-pnpm --filter feature-x build
 ```
 
 ---
 
-## Apps
+## Component Usage
 
-### feature-x — TeamFlow
-Team-oriented Kanban board with drag-and-drop columns, task assignments, project switching, and statistics overview. See [apps/feature-x/README.md](apps/feature-x/README.md).
+### Using DarkModeToggle
 
-### feature-y — PersonalFocus
-Personal productivity dashboard with a daily planner, priority-based task management, calendar scheduling, streak tracking, and productivity stats. See [apps/feature-y/README.md](apps/feature-y/README.md).
+```tsx
+import DarkModeToggle from '@repo/ui-components/DarkModeToggle';
 
----
+export default function MyApp() {
+  return (
+    <header>
+      <h1>My App</h1>
+      <DarkModeToggle />
+    </header>
+  );
+}
+```
 
-## Packages
+### Using BulkTaskActions
 
-### @task-mono/ui-components
-Reusable UI components built with Tailwind CSS. See [packages/ui-components/README.md](packages/ui-components/README.md).
+```tsx
+import BulkTaskActions from '@repo/ui-components/BulkTaskActions';
 
-### @task-mono/utils
-Shared utility functions. See [packages/utils/README.md](packages/utils/README.md).
+export default function TaskManager() {
+  const [tasks, setTasks] = useState([...]);
 
----
+  return (
+    <BulkTaskActions
+      tasks={tasks}
+      onBulkDelete={(ids) => setTasks(tasks.filter(t => !ids.includes(t.id)))}
+      onBulkComplete={(ids) => {
+        setTasks(tasks.map(t => ids.includes(t.id) ? {...t, status: 'completed'} : t));
+      }}
+      onBulkPriorityChange={(ids, priority) => {
+        setTasks(tasks.map(t => ids.includes(t.id) ? {...t, priority} : t));
+      }}
+    />
+  );
+}
+```
 
-## Adding New Components
+### Using useDarkMode Hook
 
-```bash
-# Create a new component in ui-components
-touch packages/ui-components/src/components/MyComponent.tsx
+```tsx
+import { useDarkMode } from '@repo/utils/useDarkMode';
 
-# Export it from the package index
-echo 'export { MyComponent } from "./components/MyComponent";' >> packages/ui-components/src/index.ts
+export default function MyComponent() {
+  const [isDark, toggleDark] = useDarkMode();
 
-# Import it in any app
-import { MyComponent } from "@task-mono/ui-components";
+  return (
+    <div>
+      <p>Dark mode is {isDark ? 'on' : 'off'}</p>
+      <button onClick={toggleDark}>Toggle</button>
+    </div>
+  );
+}
 ```
 
 ---
 
-## Adding New Utilities
+## Development Workflow
 
-```bash
-# Create a utility file
-touch packages/utils/src/myHelper.ts
+### Adding a New Component
 
-# Export from index
-echo 'export * from "./myHelper";' >> packages/utils/src/index.ts
-```
+1. Create component in `packages/ui-components/ComponentName.tsx`
+2. Export from `packages/ui-components/index.ts`
+3. Import in `apps/feature-x` or `apps/feature-y`
+4. Both apps automatically have access via `@repo/ui-components`
+
+### Adding a Utility Function
+
+1. Add function to relevant file in `packages/utils/`
+2. Export from `packages/utils/index.ts`
+3. Import in apps via `@repo/utils`
+
+### File Paths
+
+- Shared components: `@repo/ui-components`
+- Shared utilities: `@repo/utils`
+- No need for relative paths like `../../../packages/`
 
 ---
 
-*SEng5306 — Component Based Software Development | Adama Science and Technology University*
+## Features Roadmap
+
+- [ ] Task recurrence (daily/weekly/monthly)
+- [ ] Task dependencies and blocking
+- [ ] Time tracking per task
+- [ ] Advanced search and filters
+- [ ] User authentication
+- [ ] Collaborative comments
+- [ ] Calendar view
+- [ ] Mobile app (React Native)
+
+---
+
+## Code Quality
+
+- ✅ TypeScript strict mode
+- ✅ ESLint configured
+- ✅ Tailwind CSS linting
+- ✅ Component documentation
+- ✅ Hook documentation
+
+---
+
+## Troubleshooting
+
+| Issue | Solution |
+|-------|----------|
+| Port 3000 already in use | Kill process: `lsof -i :3000` then `kill -9 <PID>` |
+| Dependency errors | Delete `node_modules` and `pnpm-lock.yaml`, run `pnpm install` |
+| Hot reload not working | Stop dev server, run `pnpm dev` again |
+
+---
+
+## License
+
+MIT
+
+---
+
+## Submission Statement
+
+This repository represents collaborative work completed by all group members for the SEng5306 Component Based Software Development laboratory assignment. Each member has contributed code, components, and utilities to the shared monorepo.
+
+**Submission Date:** May 2026  
+**Repository:** https://github.com/IamMachir/task-management-monorepo
