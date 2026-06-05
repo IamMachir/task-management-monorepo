@@ -19,8 +19,8 @@ export interface TaskModalProps {
   projectId?: string;
 }
 
-const PRIORITY_OPTIONS = ALL_PRIORITIES.map((p) => ({ value: p, label: getPriorityLabel(p) }));
-const STATUS_OPTIONS   = ALL_STATUSES.map((s)   => ({ value: s, label: getStatusLabel(s)  }));
+const PRIORITY_OPTIONS = ALL_PRIORITIES.map((p: any) => ({ value: p, label: getPriorityLabel(p) }));
+const STATUS_OPTIONS   = ALL_STATUSES.map((s: any)   => ({ value: s, label: getStatusLabel(s)  }));
 
 const EMPTY: Partial<Task> = { title: '', description: '', priority: 'medium', status: 'todo', dueDate: '', tags: [] };
 
@@ -37,7 +37,7 @@ export function TaskModal({ isOpen, onClose, onSave, task, projectId }: TaskModa
   if (!isOpen) return null;
 
   const set = (field: keyof Task, value: string) => {
-    setForm((prev) => ({ ...prev, [field]: value }));
+    setForm((prev: any) => ({ ...prev, [field]: value }));
     setErrors((prev) => ({ ...prev, [field]: '' }));
   };
 
