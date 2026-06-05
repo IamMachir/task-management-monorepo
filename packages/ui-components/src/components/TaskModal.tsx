@@ -5,7 +5,7 @@ import {
   ALL_PRIORITIES, ALL_STATUSES,
   getStatusLabel, getPriorityLabel,
   generateId, todayIso,
-} from '@task-mono/utils';
+} from '@repo/utils';
 import { Button }   from './Button';
 import { Input }    from './Input';
 import { Textarea } from './Textarea';
