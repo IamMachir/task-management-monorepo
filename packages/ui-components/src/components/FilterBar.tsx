@@ -1,6 +1,6 @@
 import React from 'react';
 import { cn } from '../lib/utils';
-import { ALL_STATUSES, ALL_PRIORITIES, type Status, type Priority, getStatusLabel, getPriorityLabel } from '@task-mono/utils';
+import { ALL_STATUSES, ALL_PRIORITIES, type Status, type Priority, getStatusLabel, getPriorityLabel } from '@repo/utils';
 
 export interface FilterState {
   status:   Status | 'all';
