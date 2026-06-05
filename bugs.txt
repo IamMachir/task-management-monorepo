@@ -1,0 +1,670 @@
+src/components/BulkTaskActions.tsx:2:50 - error TS2307: Cannot find mod
+ule 'lucide-react' or its corresponding type declarations.
+
+2 import { Trash2, CheckCircle, AlertCircle } from 'lucide-react';
+                                                   ~~~~~~~~~~~~~~
+
+src/components/DarkModeToggle.tsx:2:27 - error TS2307: Cannot find modu
+le 'lucide-react' or its corresponding type declarations.
+
+2 import { Moon, Sun } from 'lucide-react';
+                            ~~~~~~~~~~~~~~
+
+src/components/FilterBar.tsx:3:10 - error TS2305: Module '"@task-mono/u
+tils"' has no exported member 'ALL_STATUSES'.
+
+3 import { ALL_STATUSES, ALL_PRIORITIES, type Status, type Priority, ge
+tStatusLabel, getPriorityLabel } from '@task-mono/utils';
+           ~~~~~~~~~~~~
+
+src/components/FilterBar.tsx:3:24 - error TS2724: '"@task-mono/utils"' 
+has no exported member named 'ALL_PRIORITIES'. Did you mean 'priorities
+'?
+
+3 import { ALL_STATUSES, ALL_PRIORITIES, type Status, type Priority, ge
+tStatusLabel, getPriorityLabel } from '@task-mono/utils';
+                         ~~~~~~~~~~~~~~
+
+src/components/FilterBar.tsx:3:45 - error TS2305: Module '"@task-mono/u
+tils"' has no exported member 'Status'.
+
+3 import { ALL_STATUSES, ALL_PRIORITIES, type Status, type Priority, ge
+tStatusLabel, getPriorityLabel } from '@task-mono/utils';
+                                              ~~~~~~
+
+src/components/FilterBar.tsx:3:58 - error TS2305: Module '"@task-mono/u
+tils"' has no exported member 'Priority'.
+
+3 import { ALL_STATUSES, ALL_PRIORITIES, type Status, type Priority, ge
+tStatusLabel, getPriorityLabel } from '@task-mono/utils';
+                                                           ~~~~~~~~    
+
+src/components/FilterBar.tsx:3:68 - error TS2305: Module '"@task-mono/u
+tils"' has no exported member 'getStatusLabel'.
+
+3 import { ALL_STATUSES, ALL_PRIORITIES, type Status, type Priority, ge
+tStatusLabel, getPriorityLabel } from '@task-mono/utils';
+                                                                     ~~
+~~~~~~~~~~~~
+
+src/components/FilterBar.tsx:3:84 - error TS2305: Module '"@task-mono/u
+tils"' has no exported member 'getPriorityLabel'.
+
+3 import { ALL_STATUSES, ALL_PRIORITIES, type Status, type Priority, ge
+tStatusLabel, getPriorityLabel } from '@task-mono/utils';
+                                                                       
+              ~~~~~~~~~~~~~~~~
+
+src/components/KanbanColumn.tsx:3:15 - error TS2305: Module '"@task-mon
+o/utils"' has no exported member 'Task'.
+
+3 import { type Task, type Status, getStatusLabel } from '@task-mono/ut
+ils';
+                ~~~~
+
+src/components/KanbanColumn.tsx:3:26 - error TS2305: Module '"@task-mon
+o/utils"' has no exported member 'Status'.
+
+3 import { type Task, type Status, getStatusLabel } from '@task-mono/ut
+ils';
+                           ~~~~~~
+
+src/components/KanbanColumn.tsx:3:34 - error TS2305: Module '"@task-mon
+o/utils"' has no exported member 'getStatusLabel'.
+
+3 import { type Task, type Status, getStatusLabel } from '@task-mono/ut
+ils';
+                                   ~~~~~~~~~~~~~~
+
+src/components/PriorityBadge.tsx:3:10 - error TS2305: Module '"@task-mo
+no/utils"' has no exported member 'getPriorityColor'.
+
+3 import { getPriorityColor, getPriorityLabel, type Priority } from '@t
+ask-mono/utils';
+           ~~~~~~~~~~~~~~~~
+
+src/components/PriorityBadge.tsx:3:28 - error TS2305: Module '"@task-mo
+no/utils"' has no exported member 'getPriorityLabel'.
+
+3 import { getPriorityColor, getPriorityLabel, type Priority } from '@t
+ask-mono/utils';
+                             ~~~~~~~~~~~~~~~~
+
+src/components/PriorityBadge.tsx:3:51 - error TS2305: Module '"@task-mo
+no/utils"' has no exported member 'Priority'.
+
+3 import { getPriorityColor, getPriorityLabel, type Priority } from '@t
+ask-mono/utils';
+                                                    ~~~~~~~~
+
+src/components/Sidebar.tsx:3:15 - error TS2305: Module '"@task-mono/uti
+ls"' has no exported member 'Project'.
+
+3 import { type Project } from '@task-mono/utils';
+                ~~~~~~~
+
+src/components/StatusBadge.tsx:3:10 - error TS2305: Module '"@task-mono
+/utils"' has no exported member 'getStatusColor'.
+
+3 import { getStatusColor, getStatusLabel, type Status } from '@task-mo
+no/utils';
+           ~~~~~~~~~~~~~~
+
+src/components/StatusBadge.tsx:3:26 - error TS2305: Module '"@task-mono
+/utils"' has no exported member 'getStatusLabel'.
+
+3 import { getStatusColor, getStatusLabel, type Status } from '@task-mo
+no/utils';
+                           ~~~~~~~~~~~~~~
+
+src/components/StatusBadge.tsx:3:47 - error TS2305: Module '"@task-mono
+/utils"' has no exported member 'Status'.
+
+3 import { getStatusColor, getStatusLabel, type Status } from '@task-mo
+no/utils';
+                                                ~~~~~~
+
+src/components/TaskCard.tsx:3:15 - error TS2305: Module '"@task-mono/ut
+ils"' has no exported member 'Task'.
+
+3 import { type Task, formatDate, isOverdue, daysUntilDue } from '@task
+-mono/utils';
+                ~~~~
+
+src/components/TaskCard.tsx:3:33 - error TS2305: Module '"@task-mono/ut
+ils"' has no exported member 'isOverdue'.
+
+3 import { type Task, formatDate, isOverdue, daysUntilDue } from '@task
+-mono/utils';
+                                  ~~~~~~~~~
+
+src/components/TaskCard.tsx:3:44 - error TS2305: Module '"@task-mono/ut
+ils"' has no exported member 'daysUntilDue'.
+
+3 import { type Task, formatDate, isOverdue, daysUntilDue } from '@task
+-mono/utils';
+                                             ~~~~~~~~~~~~
+
+src/components/TaskCard.tsx:3:64 - error TS6059: File 'C:/Users/MACHIR/
+Desktop/task-management-monorepo/packages/utils/src/index.ts' is not un
+der 'rootDir' 'C:/Users/MACHIR/Desktop/task-management-monorepo/package
+s/ui-components/src'. 'rootDir' is expected to contain all source files
+.
+  The file is in the program because:
+    Imported via '@task-mono/utils' from file 'C:/Users/MACHIR/Desktop/
+task-management-monorepo/packages/ui-components/src/components/TaskCard
+.tsx'
+    Imported via '@task-mono/utils' from file 'C:/Users/MACHIR/Desktop/
+task-management-monorepo/packages/ui-components/src/components/Priority
+Badge.tsx'
+    Imported via '@task-mono/utils' from file 'C:/Users/MACHIR/Desktop/
+task-management-monorepo/packages/ui-components/src/components/StatusBa
+dge.tsx'
+    Imported via '@task-mono/utils' from file 'C:/Users/MACHIR/Desktop/
+task-management-monorepo/packages/ui-components/src/components/UserAvat
+ar.tsx'
+    Imported via '@task-mono/utils' from file 'C:/Users/MACHIR/Desktop/
+task-management-monorepo/packages/ui-components/src/components/TaskModa
+l.tsx'
+    Imported via '@task-mono/utils' from file 'C:/Users/MACHIR/Desktop/
+task-management-monorepo/packages/ui-components/src/components/KanbanCo
+lumn.tsx'
+    Imported via '@task-mono/utils' from file 'C:/Users/MACHIR/Desktop/
+task-management-monorepo/packages/ui-components/src/components/Sidebar.
+tsx'
+    Imported via '@task-mono/utils' from file 'C:/Users/MACHIR/Desktop/
+task-management-monorepo/packages/ui-components/src/components/FilterBa
+r.tsx'
+
+3 import { type Task, formatDate, isOverdue, daysUntilDue } from '@task
+-mono/utils';
+                                                                 ~~~~~~
+~~~~~~~~~~~~
+
+  src/components/PriorityBadge.tsx:3:67
+    3 import { getPriorityColor, getPriorityLabel, type Priority } from
+ '@task-mono/utils';
+                                                                       
+ ~~~~~~~~~~~~~~~~~~
+    File is included via import here.
+  src/components/StatusBadge.tsx:3:61
+    3 import { getStatusColor, getStatusLabel, type Status } from '@tas
+k-mono/utils';
+                                                                  ~~~~~
+~~~~~~~~~~~~~
+    File is included via import here.
+  src/components/UserAvatar.tsx:3:44
+    3 import { getInitials, stringToColor } from '@task-mono/utils';   
+                                                 ~~~~~~~~~~~~~~~~~~    
+    File is included via import here.
+  src/components/TaskModal.tsx:8:8
+    8 } from '@task-mono/utils';
+             ~~~~~~~~~~~~~~~~~~
+    File is included via import here.
+  src/components/KanbanColumn.tsx:3:56
+    3 import { type Task, type Status, getStatusLabel } from '@task-mon
+o/utils';
+                                                             ~~~~~~~~~~
+~~~~~~~~
+    File is included via import here.
+  src/components/Sidebar.tsx:3:30
+    3 import { type Project } from '@task-mono/utils';
+                                   ~~~~~~~~~~~~~~~~~~
+    File is included via import here.
+  src/components/FilterBar.tsx:3:108
+    3 import { ALL_STATUSES, ALL_PRIORITIES, type Status, type Priority
+, getStatusLabel, getPriorityLabel } from '@task-mono/utils';
+                                                                       
+                                          ~~~~~~~~~~~~~~~~~~
+    File is included via import here.
+
+src/components/TaskCard.tsx:93:26 - error TS7006: Parameter 'tag' impli
+citly has an 'any' type.
+
+93         {task.tags?.map((tag) => (
+                            ~~~
+
+src/components/TaskModal.tsx:4:8 - error TS2305: Module '"@task-mono/ut
+ils"' has no exported member 'Task'.
+
+4   type Task, type Priority, type Status,
+         ~~~~
+
+src/components/TaskModal.tsx:4:19 - error TS2305: Module '"@task-mono/u
+tils"' has no exported member 'Priority'.
+
+4   type Task, type Priority, type Status,
+                    ~~~~~~~~
+
+src/components/TaskModal.tsx:4:34 - error TS2305: Module '"@task-mono/u
+tils"' has no exported member 'Status'.
+
+4   type Task, type Priority, type Status,
+                                   ~~~~~~
+
+src/components/TaskModal.tsx:5:3 - error TS2724: '"@task-mono/utils"' h
+as no exported member named 'ALL_PRIORITIES'. Did you mean 'priorities'
+?
+
+5   ALL_PRIORITIES, ALL_STATUSES,
+    ~~~~~~~~~~~~~~
+
+src/components/TaskModal.tsx:5:19 - error TS2305: Module '"@task-mono/u
+tils"' has no exported member 'ALL_STATUSES'.
+
+5   ALL_PRIORITIES, ALL_STATUSES,
+                    ~~~~~~~~~~~~
+
+src/components/TaskModal.tsx:6:3 - error TS2305: Module '"@task-mono/ut
+ils"' has no exported member 'getStatusLabel'.
+
+6   getStatusLabel, getPriorityLabel,
+    ~~~~~~~~~~~~~~
+
+src/components/TaskModal.tsx:6:19 - error TS2305: Module '"@task-mono/u
+tils"' has no exported member 'getPriorityLabel'.
+
+6   getStatusLabel, getPriorityLabel,
+                    ~~~~~~~~~~~~~~~~
+
+src/components/TaskModal.tsx:7:15 - error TS2305: Module '"@task-mono/u
+tils"' has no exported member 'todayIso'.
+
+7   generateId, todayIso,
+                ~~~~~~~~
+
+src/components/TaskModal.tsx:22:46 - error TS7006: Parameter 'p' implic
+itly has an 'any' type.
+
+22 const PRIORITY_OPTIONS = ALL_PRIORITIES.map((p) => ({ value: p, labe
+l: getPriorityLabel(p) }));
+                                                ~
+
+src/components/TaskModal.tsx:23:44 - error TS7006: Parameter 's' implic
+itly has an 'any' type.
+
+23 const STATUS_OPTIONS   = ALL_STATUSES.map((s)   => ({ value: s, labe
+l: getStatusLabel(s)  }));
+                                              ~
+
+src/components/TaskModal.tsx:40:14 - error TS7006: Parameter 'prev' imp
+licitly has an 'any' type.
+
+40     setForm((prev) => ({ ...prev, [field]: value }));
+                ~~~~
+
+src/components/UserAvatar.tsx:3:10 - error TS2305: Module '"@task-mono/
+utils"' has no exported member 'getInitials'.
+
+3 import { getInitials, stringToColor } from '@task-mono/utils';       
+           ~~~~~~~~~~~
+
+src/components/UserAvatar.tsx:3:23 - error TS2305: Module '"@task-mono/
+utils"' has no exported member 'stringToColor'.
+
+3 import { getInitials, stringToColor } from '@task-mono/utils';       
+                        ~~~~~~~~~~~~~
+
+../utils/src/index.ts:1:10 - error TS2305: Module '"./date"' has no exp
+orted member 'date'.
+
+1 export { date, formatDate, isToday, isTomorrow, getDayName } from './
+date';
+           ~~~~
+
+../utils/src/index.ts:1:37 - error TS2305: Module '"./date"' has no exp
+orted member 'isTomorrow'.
+
+1 export { date, formatDate, isToday, isTomorrow, getDayName } from './
+date';
+                                      ~~~~~~~~~~
+
+../utils/src/index.ts:1:49 - error TS2305: Module '"./date"' has no exp
+orted member 'getDayName'.
+
+1 export { date, formatDate, isToday, isTomorrow, getDayName } from './
+date';
+                                                  ~~~~~~~~~~
+
+../utils/src/index.ts:1:67 - error TS6059: File 'C:/Users/MACHIR/Deskto
+p/task-management-monorepo/packages/utils/src/date.ts' is not under 'ro
+otDir' 'C:/Users/MACHIR/Desktop/task-management-monorepo/packages/ui-co
+mponents/src'. 'rootDir' is expected to contain all source files.      
+
+1 export { date, formatDate, isToday, isTomorrow, getDayName } from './
+date';
+                                                                    ~~~
+~~~~~
+
+../utils/src/index.ts:2:47 - error TS6059: File 'C:/Users/MACHIR/Deskto
+p/task-management-monorepo/packages/utils/src/string.ts' is not under '
+rootDir' 'C:/Users/MACHIR/Desktop/task-management-monorepo/packages/ui-
+components/src'. 'rootDir' is expected to contain all source files.    
+  The file is in the program because:
+    Imported via './string' from file 'C:/Users/MACHIR/Desktop/task-man
+agement-monorepo/packages/utils/src/index.ts'
+    Imported via './string' from file 'C:/Users/MACHIR/Desktop/task-man
+agement-monorepo/packages/utils/src/filter.ts'
+
+2 export { capitalize, truncate, slugify } from './string';
+                                                ~~~~~~~~~~
+
+  ../utils/src/filter.ts:3:36
+    3 import { containsIgnoreCase } from './string';
+                                         ~~~~~~~~~~
+    File is included via import here.
+
+../utils/src/index.ts:3:10 - error TS2305: Module '"./task"' has no exp
+orted member 'createTask'.
+
+3 export { createTask, updateTask, deleteTask, filterTasks, getTotalPro
+gress } from './task';
+           ~~~~~~~~~~
+
+../utils/src/index.ts:3:22 - error TS2305: Module '"./task"' has no exp
+orted member 'updateTask'.
+
+3 export { createTask, updateTask, deleteTask, filterTasks, getTotalPro
+gress } from './task';
+                       ~~~~~~~~~~
+
+../utils/src/index.ts:3:34 - error TS2305: Module '"./task"' has no exp
+orted member 'deleteTask'.
+
+3 export { createTask, updateTask, deleteTask, filterTasks, getTotalPro
+gress } from './task';
+                                   ~~~~~~~~~~
+
+../utils/src/index.ts:3:46 - error TS2305: Module '"./task"' has no exp
+orted member 'filterTasks'.
+
+3 export { createTask, updateTask, deleteTask, filterTasks, getTotalPro
+gress } from './task';
+                                               ~~~~~~~~~~~
+
+../utils/src/index.ts:3:59 - error TS2305: Module '"./task"' has no exp
+orted member 'getTotalProgress'.
+
+3 export { createTask, updateTask, deleteTask, filterTasks, getTotalPro
+gress } from './task';
+                                                            ~~~~~~~~~~~
+~~~~~
+
+../utils/src/index.ts:3:83 - error TS6059: File 'C:/Users/MACHIR/Deskto
+p/task-management-monorepo/packages/utils/src/task.ts' is not under 'ro
+otDir' 'C:/Users/MACHIR/Desktop/task-management-monorepo/packages/ui-co
+mponents/src'. 'rootDir' is expected to contain all source files.      
+  The file is in the program because:
+    Imported via './task' from file 'C:/Users/MACHIR/Desktop/task-manag
+ement-monorepo/packages/utils/src/index.ts'
+    Imported via './task' from file 'C:/Users/MACHIR/Desktop/task-manag
+ement-monorepo/packages/utils/src/filter.ts'
+    Imported via './task' from file 'C:/Users/MACHIR/Desktop/task-manag
+ement-monorepo/packages/utils/src/filter.ts'
+    Imported via './task' from file 'C:/Users/MACHIR/Desktop/task-manag
+ement-monorepo/packages/utils/src/storage.ts'
+    Imported via './task' from file 'C:/Users/MACHIR/Desktop/task-manag
+ement-monorepo/packages/utils/src/validation.ts'
+
+3 export { createTask, updateTask, deleteTask, filterTasks, getTotalPro
+gress } from './task';
+                                                                       
+             ~~~~~~~~
+
+  ../utils/src/filter.ts:1:45
+    1 import type { Task, Priority, Status } from './task';
+                                                  ~~~~~~~~
+    File is included via import here.
+  ../utils/src/filter.ts:2:34
+    2 import { getPriorityOrder } from './task';
+                                       ~~~~~~~~
+    File is included via import here.
+  ../utils/src/storage.ts:1:36
+    1 import type { Task, Project } from './task';
+                                         ~~~~~~~~
+    File is included via import here.
+  ../utils/src/validation.ts:1:27
+    1 import type { Task } from './task';
+                                ~~~~~~~~
+    File is included via import here.
+
+../utils/src/index.ts:4:10 - error TS2305: Module '"./filter"' has no e
+xported member 'filterByStatus'.
+
+4 export { filterByStatus, filterByPriority, filterByDate } from './fil
+ter';
+           ~~~~~~~~~~~~~~
+
+../utils/src/index.ts:4:26 - error TS2305: Module '"./filter"' has no e
+xported member 'filterByPriority'.
+
+4 export { filterByStatus, filterByPriority, filterByDate } from './fil
+ter';
+                           ~~~~~~~~~~~~~~~~
+
+../utils/src/index.ts:4:44 - error TS2305: Module '"./filter"' has no e
+xported member 'filterByDate'.
+
+4 export { filterByStatus, filterByPriority, filterByDate } from './fil
+ter';
+                                             ~~~~~~~~~~~~
+
+../utils/src/index.ts:4:64 - error TS6059: File 'C:/Users/MACHIR/Deskto
+p/task-management-monorepo/packages/utils/src/filter.ts' is not under '
+rootDir' 'C:/Users/MACHIR/Desktop/task-management-monorepo/packages/ui-
+components/src'. 'rootDir' is expected to contain all source files.    
+
+4 export { filterByStatus, filterByPriority, filterByDate } from './fil
+ter';
+                                                                 ~~~~~~
+~~~~
+
+../utils/src/index.ts:5:10 - error TS2305: Module '"./storage"' has no 
+exported member 'getFromStorage'.
+
+5 export { getFromStorage, saveToStorage, clearStorage } from './storag
+e';
+           ~~~~~~~~~~~~~~
+
+../utils/src/index.ts:5:26 - error TS2305: Module '"./storage"' has no 
+exported member 'saveToStorage'.
+
+5 export { getFromStorage, saveToStorage, clearStorage } from './storag
+e';
+                           ~~~~~~~~~~~~~
+
+../utils/src/index.ts:5:61 - error TS6059: File 'C:/Users/MACHIR/Deskto
+p/task-management-monorepo/packages/utils/src/storage.ts' is not under 
+'rootDir' 'C:/Users/MACHIR/Desktop/task-management-monorepo/packages/ui
+-components/src'. 'rootDir' is expected to contain all source files.   
+
+5 export { getFromStorage, saveToStorage, clearStorage } from './storag
+e';
+                                                              ~~~~~~~~~
+~~
+
+../utils/src/index.ts:6:28 - error TS6059: File 'C:/Users/MACHIR/Deskto
+p/task-management-monorepo/packages/utils/src/id.ts' is not under 'root
+Dir' 'C:/Users/MACHIR/Desktop/task-management-monorepo/packages/ui-comp
+onents/src'. 'rootDir' is expected to contain all source files.        
+
+6 export { generateId } from './id';
+                             ~~~~~~
+
+../utils/src/index.ts:7:10 - error TS2724: '"./validation"' has no expo
+rted member named 'validateEmail'. Did you mean 'isValidEmail'?        
+
+7 export { validateEmail, validateTask } from './validation';
+           ~~~~~~~~~~~~~
+
+  ../utils/src/validation.ts:50:17
+    50 export function isValidEmail(email: string): boolean {
+                       ~~~~~~~~~~~~
+    'isValidEmail' is declared here.
+
+../utils/src/index.ts:7:45 - error TS6059: File 'C:/Users/MACHIR/Deskto
+p/task-management-monorepo/packages/utils/src/validation.ts' is not und
+er 'rootDir' 'C:/Users/MACHIR/Desktop/task-management-monorepo/packages
+/ui-components/src'. 'rootDir' is expected to contain all source files.
+
+7 export { validateEmail, validateTask } from './validation';
+                                              ~~~~~~~~~~~~~~
+
+../utils/src/index.ts:10:65 - error TS6059: File 'C:/Users/MACHIR/Deskt
+op/task-management-monorepo/packages/utils/src/theme.ts' is not under '
+rootDir' 'C:/Users/MACHIR/Desktop/task-management-monorepo/packages/ui-
+components/src'. 'rootDir' is expected to contain all source files.    
+
+10 export { isDarkMode, lightColors, darkColors, priorities } from './t
+heme';
+                                                                   ~~~~
+~~~~~
+
+../utils/src/index.ts:11:29 - error TS6059: File 'C:/Users/MACHIR/Deskt
+op/task-management-monorepo/packages/utils/src/useDarkMode.ts' is not u
+nder 'rootDir' 'C:/Users/MACHIR/Desktop/task-management-monorepo/packag
+es/ui-components/src'. 'rootDir' is expected to contain all source file
+s.
+
+11 export { useDarkMode } from './useDarkMode';
+                               ~~~~~~~~~~~~~~~
+
+../utils/src/index.ts:12:62 - error TS6059: File 'C:/Users/MACHIR/Deskt
+op/task-management-monorepo/packages/utils/src/bulkOperations.ts' is no
+t under 'rootDir' 'C:/Users/MACHIR/Desktop/task-management-monorepo/pac
+kages/ui-components/src'. 'rootDir' is expected to contain all source f
+iles.
+
+12 export { bulkDelete, bulkComplete, bulkChangePriority } from './bulk
+Operations';
+                                                                ~~~~~~~
+~~~~~~~~~~~
+
+../utils/src/useDarkMode.ts:1:37 - error TS2307: Cannot find module 're
+act' or its corresponding type declarations.
+
+1 import { useEffect, useState } from 'react';
+                                      ~~~~~~~
+
+[10:13:16 PM] Found 61 errors. Watching for file changes.
+└─ @task-mono/ui-components#dev ──
+┌─ @task-mono/utils#dev > cache bypass, force executing 820220a5802b6974 
+[10:12:44 PM] Starting compilation in watch mode...
+
+src/index.ts:1:10 - error TS2305: Module '"./date"' has no exported mem
+ber 'date'.
+
+1 export { date, formatDate, isToday, isTomorrow, getDayName } from './
+date';
+           ~~~~
+
+src/index.ts:1:37 - error TS2305: Module '"./date"' has no exported mem
+ber 'isTomorrow'.
+
+1 export { date, formatDate, isToday, isTomorrow, getDayName } from './
+date';
+                                      ~~~~~~~~~~
+
+src/index.ts:1:49 - error TS2305: Module '"./date"' has no exported mem
+ber 'getDayName'.
+
+1 export { date, formatDate, isToday, isTomorrow, getDayName } from './
+date';
+                                                  ~~~~~~~~~~
+
+src/index.ts:3:10 - error TS2305: Module '"./task"' has no exported mem
+ber 'createTask'.
+
+3 export { createTask, updateTask, deleteTask, filterTasks, getTotalPro
+gress } from './task';
+           ~~~~~~~~~~
+
+src/index.ts:3:22 - error TS2305: Module '"./task"' has no exported mem
+ber 'updateTask'.
+
+3 export { createTask, updateTask, deleteTask, filterTasks, getTotalPro
+gress } from './task';
+                       ~~~~~~~~~~
+
+src/index.ts:3:34 - error TS2305: Module '"./task"' has no exported mem
+ber 'deleteTask'.
+
+3 export { createTask, updateTask, deleteTask, filterTasks, getTotalPro
+gress } from './task';
+                                   ~~~~~~~~~~
+
+src/index.ts:3:46 - error TS2305: Module '"./task"' has no exported mem
+ber 'filterTasks'.
+
+3 export { createTask, updateTask, deleteTask, filterTasks, getTotalPro
+gress } from './task';
+                                               ~~~~~~~~~~~
+
+src/index.ts:3:59 - error TS2305: Module '"./task"' has no exported mem
+ber 'getTotalProgress'.
+
+3 export { createTask, updateTask, deleteTask, filterTasks, getTotalPro
+gress } from './task';
+                                                            ~~~~~~~~~~~
+~~~~~
+
+src/index.ts:4:10 - error TS2305: Module '"./filter"' has no exported m
+ember 'filterByStatus'.
+
+4 export { filterByStatus, filterByPriority, filterByDate } from './fil
+ter';
+           ~~~~~~~~~~~~~~
+
+src/index.ts:4:26 - error TS2305: Module '"./filter"' has no exported m
+ember 'filterByPriority'.
+
+4 export { filterByStatus, filterByPriority, filterByDate } from './fil
+ter';
+                           ~~~~~~~~~~~~~~~~
+
+src/index.ts:4:44 - error TS2305: Module '"./filter"' has no exported m
+ember 'filterByDate'.
+
+4 export { filterByStatus, filterByPriority, filterByDate } from './fil
+ter';
+                                             ~~~~~~~~~~~~
+
+src/index.ts:5:10 - error TS2305: Module '"./storage"' has no exported 
+member 'getFromStorage'.
+
+5 export { getFromStorage, saveToStorage, clearStorage } from './storag
+e';
+           ~~~~~~~~~~~~~~
+
+src/index.ts:5:26 - error TS2305: Module '"./storage"' has no exported 
+member 'saveToStorage'.
+
+5 export { getFromStorage, saveToStorage, clearStorage } from './storag
+e';
+                           ~~~~~~~~~~~~~
+
+src/index.ts:7:10 - error TS2724: '"./validation"' has no exported memb
+er named 'validateEmail'. Did you mean 'isValidEmail'?
+
+7 export { validateEmail, validateTask } from './validation';
+           ~~~~~~~~~~~~~
+
+  src/validation.ts:50:17
+    50 export function isValidEmail(email: string): boolean {
+                       ~~~~~~~~~~~~
+    'isValidEmail' is declared here.
+
+src/useDarkMode.ts:1:37 - error TS2307: Cannot find module 'react' or i
+ts corresponding type declarations.
+
+1 import { useEffect, useState } from 'react';
+                                      ~~~~~~~
+
+[10:13:13 PM] Found 15 errors. Watching for file changes.
+└─ @task-mono/utils#dev ──
+
+ Tasks:    0 successful, 4 total
+Cached:    0 cached, 4 total
+  Time:    2m8.232s 
+Failed:    @task-mono/ui-components#dev, @task-mono/utils#dev, feature-x#dev, feature-y#dev
+v
