@@ -32,5 +32,9 @@ export { StatsCard }          from './components/StatsCard';
 export { EmptyState }         from './components/EmptyState';
 export { ConfirmationDialog } from './components/ConfirmationDialog';
 
+// NEW: Dark mode & Bulk operations
+export { DarkModeToggle } from './components/DarkModeToggle';
+export { BulkTaskActions } from './components/BulkTaskActions';
+
 // Lib
 export { cn } from './lib/utils';
