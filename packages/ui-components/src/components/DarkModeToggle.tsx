@@ -1,11 +1,27 @@
 import React, { useEffect, useState } from 'react';
 import { Moon, Sun } from 'lucide-react';
 
+/**
+ * DarkModeToggle Component
+ * 
+ * A reusable button that toggles dark mode on/off.
+ * Persists user preference to localStorage.
+ * 
+ * Usage:
+ *   <DarkModeToggle />
+ * 
+ * The component:
+ * - Shows a moon icon in light mode
+ * - Shows a sun icon in dark mode
+ * - Adds 'dark' class to the <html> element when active
+ * - Saves preference so it remembers on page reload
+ */
 export function DarkModeToggle() {
   const [isDark, setIsDark] = useState(false);
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
+    // Check localStorage on component mount (client-side only)
     const saved = localStorage.getItem('darkMode') === 'true';
     const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
     const shouldBeDark = saved || prefersDark;
@@ -29,6 +45,7 @@ export function DarkModeToggle() {
     }
   };
 
+  // Prevent hydration mismatch
   if (!mounted) return <div className="w-10 h-10" />;
 
   return (
