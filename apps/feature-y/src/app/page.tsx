@@ -1,16 +1,6 @@
 import React, { useState } from 'react';
-import DarkModeToggle from '@repo/ui-components/DarkModeToggle';
-import BulkTaskActions from '@repo/ui-components/BulkTaskActions';
+import { DarkModeToggle, BulkTaskActions } from '@repo/ui-components';
 
-/**
- * PersonalFocus - Daily Task Planner
- * 
- * Features:
- * - Dark mode toggle (top right)
- * - Bulk task operations
- * - Daily/upcoming/all task views
- * - Habit tracker with streaks
- */
 export default function Home() {
   const [tasks, setTasks] = useState([
     { id: '1', title: 'Morning workout', status: 'completed', priority: 'high' },
@@ -32,12 +22,10 @@ export default function Home() {
     setTasks(tasks.map(t => ids.includes(t.id) ? { ...t, priority } : t));
   };
 
-  const todayTasks = tasks.filter(t => t.status !== 'completed');
   const completedCount = tasks.filter(t => t.status === 'completed').length;
 
   return (
     <div className="min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-white transition-colors">
-      {/* Header */}
       <header className="border-b border-gray-200 dark:border-gray-800">
         <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
           <div>
@@ -48,26 +36,22 @@ export default function Home() {
         </div>
       </header>
 
-      {/* Main Content */}
       <main className="max-w-7xl mx-auto px-6 py-8">
         <div className="grid md:grid-cols-3 gap-8">
-          {/* Today's Tasks */}
           <section className="md:col-span-2">
             <h2 className="text-2xl font-bold mb-4">Today's Tasks</h2>
             <BulkTaskActions
-              tasks={todayTasks}
+              tasks={tasks}
               onBulkDelete={handleBulkDelete}
               onBulkComplete={handleBulkComplete}
               onBulkPriorityChange={handleBulkPriorityChange}
             />
           </section>
 
-          {/* Progress Sidebar */}
           <aside>
             <h3 className="text-xl font-bold mb-4">Progress</h3>
             
             <div className="space-y-4">
-              {/* Completion Ratio */}
               <div className="p-4 bg-gradient-to-br from-blue-100 to-purple-100 dark:from-blue-900/30 dark:to-purple-900/30 rounded-lg">
                 <p className="text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Completion Today</p>
                 <div className="flex items-end gap-2">
@@ -82,7 +66,6 @@ export default function Home() {
                 </div>
               </div>
 
-              {/* Priority Breakdown */}
               <div className="p-4 bg-gray-50 dark:bg-gray-800 rounded-lg">
                 <p className="text-sm font-medium text-gray-700 dark:text-gray-300 mb-3">By Priority</p>
                 <div className="space-y-2">

@@ -1,23 +1,11 @@
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import { Moon, Sun } from 'lucide-react';
 
-/**
- * useDarkMode Hook
- * 
- * Custom React hook for managing dark mode state.
- * Reads from localStorage and system preference.
- * 
- * Returns: [isDark, toggleDark]
- * 
- * Usage:
- *   const [isDark, toggleDark] = useDarkMode();
- *   if (isDark) { ... }
- */
-export const useDarkMode = (): [boolean, () => void] => {
+export function DarkModeToggle() {
   const [isDark, setIsDark] = useState(false);
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    // Check localStorage and system preference on mount
     const saved = localStorage.getItem('darkMode') === 'true';
     const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
     const shouldBeDark = saved || prefersDark;
@@ -29,7 +17,7 @@ export const useDarkMode = (): [boolean, () => void] => {
     setMounted(true);
   }, []);
 
-  const toggleDark = () => {
+  const toggle = () => {
     const newState = !isDark;
     setIsDark(newState);
     localStorage.setItem('darkMode', String(newState));
@@ -41,5 +29,19 @@ export const useDarkMode = (): [boolean, () => void] => {
     }
   };
 
-  return [isDark, toggleDark];
-};
+  if (!mounted) return <div className="w-10 h-10" />;
+
+  return (
+    <button
+      onClick={toggle}
+      className="p-2 rounded-lg border border-gray-300 dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-800 transition"
+      title={isDark ? 'Light mode' : 'Dark mode'}
+    >
+      {isDark ? (
+        <Sun className="w-5 h-5 text-yellow-500" />
+      ) : (
+        <Moon className="w-5 h-5 text-gray-700" />
+      )}
+    </button>
+  );
+}

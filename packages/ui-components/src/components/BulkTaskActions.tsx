@@ -8,35 +8,19 @@ interface Task {
   status: string;
 }
 
-interface BulkTaskActionsProps {
+interface Props {
   tasks: Task[];
   onBulkDelete: (ids: string[]) => void;
   onBulkComplete: (ids: string[]) => void;
   onBulkPriorityChange: (ids: string[], priority: 'high' | 'medium' | 'low') => void;
 }
 
-/**
- * BulkTaskActions Component
- * 
- * Allows users to select multiple tasks and perform bulk operations:
- * - Mark as complete
- * - Delete
- * - Change priority
- * 
- * Usage:
- *   <BulkTaskActions 
- *     tasks={allTasks}
- *     onBulkDelete={handleDelete}
- *     onBulkComplete={handleComplete}
- *     onBulkPriorityChange={handlePriorityChange}
- *   />
- */
-export default function BulkTaskActions({
+export function BulkTaskActions({
   tasks,
   onBulkDelete,
   onBulkComplete,
   onBulkPriorityChange,
-}: BulkTaskActionsProps) {
+}: Props) {
   const [selected, setSelected] = useState<Set<string>>(new Set());
 
   const toggleSelect = (id: string) => {
@@ -62,9 +46,7 @@ export default function BulkTaskActions({
 
   return (
     <div className="space-y-4">
-      {/* Task Selection List */}
       <div className="space-y-2">
-        {/* Select All Header */}
         <div className="flex items-center gap-3 p-3 bg-gray-50 dark:bg-gray-800 rounded-lg">
           <input
             type="checkbox"
@@ -77,7 +59,6 @@ export default function BulkTaskActions({
           </span>
         </div>
 
-        {/* Individual Task Checkboxes */}
         {tasks.map(task => (
           <div key={task.id} className="flex items-center gap-3 p-3 border border-gray-200 dark:border-gray-700 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800">
             <input
@@ -94,7 +75,6 @@ export default function BulkTaskActions({
         ))}
       </div>
 
-      {/* Bulk Actions Toolbar */}
       {hasSelection && (
         <div className="p-4 bg-blue-50 dark:bg-blue-900/30 border border-blue-200 dark:border-blue-800 rounded-lg flex flex-wrap gap-2">
           <button
@@ -138,7 +118,6 @@ export default function BulkTaskActions({
         </div>
       )}
 
-      {/* Empty State */}
       {tasks.length === 0 && (
         <div className="p-8 text-center text-gray-500 dark:text-gray-400">
           <AlertCircle className="w-12 h-12 mx-auto mb-2 opacity-50" />

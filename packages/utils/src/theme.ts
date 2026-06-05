@@ -1,10 +1,3 @@
-/**
- * Theme Colors & Constants
- * 
- * Centralized color definitions for dark/light mode.
- * Used by components and apps to maintain consistency.
- */
-
 export const lightColors = {
   bg: '#ffffff',
   text: '#000000',

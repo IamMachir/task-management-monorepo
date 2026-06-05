@@ -1,16 +1,6 @@
 import React, { useState } from 'react';
-import DarkModeToggle from '@repo/ui-components/DarkModeToggle';
-import BulkTaskActions from '@repo/ui-components/BulkTaskActions';
+import { DarkModeToggle, BulkTaskActions } from '@repo/ui-components';
 
-/**
- * TeamFlow - Kanban Board App
- * 
- * Features:
- * - Dark mode toggle (top right)
- * - Bulk task operations (select multiple, delete, complete, change priority)
- * - Kanban columns (To Do, In Progress, Done, Archived)
- * - Search and filter
- */
 export default function Home() {
   const [tasks, setTasks] = useState([
     { id: '1', title: 'Design dashboard mockup', status: 'todo', priority: 'high' },
@@ -34,7 +24,6 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-white transition-colors">
-      {/* Header */}
       <header className="border-b border-gray-200 dark:border-gray-800">
         <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
           <h1 className="text-3xl font-bold">TeamFlow</h1>
@@ -42,10 +31,8 @@ export default function Home() {
         </div>
       </header>
 
-      {/* Main Content */}
       <main className="max-w-7xl mx-auto px-6 py-8">
         <div className="grid md:grid-cols-2 gap-8">
-          {/* Bulk Operations Panel */}
           <section>
             <h2 className="text-2xl font-bold mb-4">Bulk Operations</h2>
             <BulkTaskActions
@@ -56,7 +43,6 @@ export default function Home() {
             />
           </section>
 
-          {/* Tasks Summary */}
           <section>
             <h2 className="text-2xl font-bold mb-4">Task Summary</h2>
             <div className="space-y-3">
