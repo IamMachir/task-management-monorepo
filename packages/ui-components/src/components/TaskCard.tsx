@@ -1,6 +1,6 @@
 import React from 'react';
 import { cn } from '../lib/utils';
-import { type Task, formatDate, isOverdue, daysUntilDue } from '@task-mono/utils';
+import { type Task, formatDate, isOverdue, daysUntilDue } from '@repo/utils';
 import { PriorityBadge } from './PriorityBadge';
 import { StatusBadge }   from './StatusBadge';
 import { UserAvatar }    from './UserAvatar';
