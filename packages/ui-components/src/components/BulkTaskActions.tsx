@@ -8,19 +8,35 @@ interface Task {
   status: string;
 }
 
-interface Props {
+interface BulkTaskActionsProps {
   tasks: Task[];
   onBulkDelete: (ids: string[]) => void;
   onBulkComplete: (ids: string[]) => void;
   onBulkPriorityChange: (ids: string[], priority: 'high' | 'medium' | 'low') => void;
 }
 
+/**
+ * BulkTaskActions Component
+ * 
+ * Allows users to select multiple tasks and perform bulk operations:
+ * - Mark as complete
+ * - Delete
+ * - Change priority
+ * 
+ * Usage:
+ *   <BulkTaskActions 
+ *     tasks={allTasks}
+ *     onBulkDelete={handleDelete}
+ *     onBulkComplete={handleComplete}
+ *     onBulkPriorityChange={handlePriorityChange}
+ *   />
+ */
 export function BulkTaskActions({
   tasks,
   onBulkDelete,
   onBulkComplete,
   onBulkPriorityChange,
-}: Props) {
+}: BulkTaskActionsProps) {
   const [selected, setSelected] = useState<Set<string>>(new Set());
 
   const toggleSelect = (id: string) => {
@@ -59,7 +75,7 @@ export function BulkTaskActions({
           </span>
         </div>
 
-        {tasks.map(task => (
+        {tasks.map((task: Task) => (
           <div key={task.id} className="flex items-center gap-3 p-3 border border-gray-200 dark:border-gray-700 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800">
             <input
               type="checkbox"
@@ -89,7 +105,7 @@ export function BulkTaskActions({
           </button>
 
           <select
-            onChange={(e) => {
+            onChange={(e: React.ChangeEvent<HTMLSelectElement>) => {
               const priority = e.target.value as 'high' | 'medium' | 'low';
               onBulkPriorityChange(selectedIds, priority);
               e.target.value = '';
