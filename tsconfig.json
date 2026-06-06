@@ -13,9 +13,15 @@
     "jsx": "react-jsx",
     "baseUrl": ".",
     "paths": {
-      "@task-mono/utils": ["./packages/utils/src/index.ts"],
-      "@task-mono/ui-components": ["./packages/ui-components/src/index.ts"]
+      "@repo/utils": [
+        "./packages/utils/src/index.ts"
+      ],
+      "@repo/ui-components": [
+        "./packages/ui-components/src/index.ts"
+      ]
     }
   },
-  "exclude": ["node_modules"]
+  "exclude": [
+    "node_modules"
+  ]
 }

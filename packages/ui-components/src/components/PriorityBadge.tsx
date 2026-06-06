@@ -1,6 +1,6 @@
 import React from 'react';
 import { cn } from '../lib/utils';
-import { getPriorityColor, getPriorityLabel, type Priority } from '@task-mono/utils';
+import { getPriorityColor, getPriorityLabel, type Priority } from '@repo/utils';
 
 export interface PriorityBadgeProps {
   priority:  Priority;

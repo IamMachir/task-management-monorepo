@@ -24,6 +24,7 @@
   "dependencies": {
     "clsx": "^2.1.1",
     "tailwind-merge": "^2.5.4",
-    "@task-mono/utils": "workspace:*"
+    "@task-mono/utils": "workspace:*",
+    "lucide-react": "^0.263.1"
   }
 }
