@@ -1,3 +1,4 @@
+"use client";
 import React, { useState } from 'react';
 import { DarkModeToggle, BulkTaskActions } from '@repo/ui-components';
 
