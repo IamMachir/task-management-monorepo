@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from 'react';
-import { DarkModeToggle, BulkTaskActions } from '@repo/ui-components';
+import { DarkModeToggle, BulkTaskActions } from '@task-mono/ui-components';
 
 export default function Home() {
   const [tasks, setTasks] = useState([
