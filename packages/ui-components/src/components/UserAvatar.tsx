@@ -1,6 +1,6 @@
 import React from 'react';
 import { cn } from '../lib/utils';
-import { getInitials, stringToColor } from '@repo/utils';
+import { getInitials, stringToColor } from '@task-mono/utils';
 
 export interface UserAvatarProps {
   name:      string;

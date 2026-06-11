@@ -1,6 +1,6 @@
 import React from 'react';
 import { cn } from '../lib/utils';
-import { type Task, type Status, getStatusLabel } from '@repo/utils';
+import { type Task, type Status, getStatusLabel } from '@task-mono/utils';
 import { TaskCard }  from './TaskCard';
 import { EmptyState } from './EmptyState';
 

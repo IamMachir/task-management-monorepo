@@ -1,6 +1,6 @@
 import React from 'react';
 import { cn } from '../lib/utils';
-import { getStatusColor, getStatusLabel, type Status } from '@repo/utils';
+import { getStatusColor, getStatusLabel, type Status } from '@task-mono/utils';
 
 export interface StatusBadgeProps {
   status:    Status;

@@ -1,8 +1,26 @@
 // Date utilities
-export { formatDate, formatDateShort, formatDateRelative, isToday, getTodayISO } from './date';
+export {
+  formatDate,
+  formatDateShort,
+  formatRelative,
+  isToday,
+  isOverdue,
+  daysUntilDue,
+  isThisWeek,
+  startOfDay,
+  toInputDate,
+  todayIso,
+} from './date';
 
 // String utilities
-export { capitalize, truncate, slugify, containsIgnoreCase } from './string';
+export {
+  capitalize,
+  truncate,
+  slugify,
+  containsIgnoreCase,
+  getInitials,
+  stringToColor,
+} from './string';
 
 // Task types and utilities
 export {
@@ -23,25 +41,43 @@ export {
   groupByStatus,
   groupByPriority,
   countByStatus,
-  countByPriority,
-  getInitials,
-  stringToColor,
-  isValidEmail,
-  validateTask,
-  todayIso,
 } from './task';
 
 // Filter utilities
-export { filterByKey, filterByStatus, filterByPriority, filterByDate, getUniqueValues } from './filter';
+export {
+  filterTasks,
+  sortTasks,
+  searchTasks,
+  type FilterOptions,
+  type SortField,
+  type SortDir,
+} from './filter';
 
 // Storage utilities
-export { getTasks, saveTasks, getProjects, saveProjects, getTeamMembers, saveTeamMembers, clearAllStorage } from './storage';
+export {
+  loadTasks,
+  saveTasks,
+  loadProjects,
+  saveProjects,
+  loadSettings,
+  saveSettings,
+  loadStreak,
+  saveStreak,
+  clearStorage,
+} from './storage';
 
 // ID utilities
 export { generateId } from './id';
 
 // Validation utilities
-export { isValidEmail, validateTask } from './validation';
+export {
+  isValidEmail,
+  validateTask,
+  isValidTask,
+  isValidDate,
+  isNonEmpty,
+  type ValidationError,
+} from './validation';
 
 // Dark mode utilities
 export { isDarkMode, lightColors, darkColors, priorities } from './theme';
